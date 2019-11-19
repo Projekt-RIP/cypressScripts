@@ -5,9 +5,7 @@ describe('This visits facebook.com', () => {
         let {mail,password} = initializeCredentials();
         // let mail = 'swa66518@zzrgg.com';
         // let password = 'qwertz1234';
-        console.log("Test");
-        Cypress.log({ consoleProps: () => {return {"txt": "Hello World", "mail": mail}}});
-        Cypress.log({'bla':password});
+
         login(mail, password);
 
         deleteAccount(password);
@@ -45,10 +43,15 @@ function login(mail, password) {
     
     cy.focused().type(mail);
    
-    cy.get('[data-testid=royal_pass]').type(password);
-    cy.get('[data-testid=royal_login_button]').click();
+    if(cy.get('[data-testid=royal_pass]').should('exist')){
+        cy.get('[data-testid=royal_pass]').type(password);
+        cy.get('[data-testid=royal_login_button]').click();
+    }
+    else{
+        cy.get(':nth-child(2) > .inputtext').type(password)
+        cy.get(':nth-child(5) > ._42ft').click();
+    }
     
-    // cy.get(':nth-child(2) > .inputtext').type(password)
-    // cy.get(':nth-child(5) > ._42ft').click();
+    
     
 }
