@@ -1,0 +1,8 @@
+
+Testaccount:
+d1323292@urhen.com
+qwertz1234
+
+Befehl:
+npx cypress run --spec '.\cypress\integration\examples\facebook.spec.js' --env user='d1323292@urhen.com',password='qwertz1234'
+
