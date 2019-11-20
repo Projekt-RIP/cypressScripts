@@ -6,4 +6,3 @@ qwertz1234
 Befehl:
 npx cypress run --spec '.\cypress\integration\examples\facebook.spec.js' --env user='d1323292@urhen.com',password='qwertz1234'
 
-Letze Anweisung ('Löschen Bestätigen' ist auskommentiert, damit der Account zu Testzwecken erhalten bleibt)
