@@ -1,8 +1,8 @@
 describe('This visits twitter.com', () => {
 
     it('', () => {
-        let mail = 'd1139869@urhen.com';
-        let password = 'P4ssW0rd';
+        let mail = Cypress.env("user");
+        let password = Cypress.env("password");
         login(mail, password);
     })
 })

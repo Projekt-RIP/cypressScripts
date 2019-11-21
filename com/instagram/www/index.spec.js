@@ -1,8 +1,8 @@
 describe('This visits instagram.com', () => {
 
     it('', () => {
-        let mail = Cypress.env('apollo987@web.de');
-        let password = Cypress.env('medion');
+        let mail = Cypress.env("user");
+        let password = Cypress.env('password');
         login(mail, password); //maybe redundant
         deleteAccount(mail, password);
     })
