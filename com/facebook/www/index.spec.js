@@ -3,8 +3,7 @@ describe('This visits facebook.com', () => {
     it('', () => {
 
         let {mail,password} = initializeCredentials();
-        // let mail = 'swa66518@zzrgg.com';
-        // let password = 'qwertz1234';
+      
 
         login(mail, password);
 
@@ -28,7 +27,7 @@ function deleteAccount(password) {
     cy.get(':nth-child(5) > input').type(password);
     cy.get('.layerConfirm').click();
     cy.wait(2000);
-    // cy.get('.layerConfirm').click();
+    cy.get('.layerConfirm').click();
 }
 
 function initializeCredentials() {
